@@ -16,6 +16,7 @@ export default function Login() {
                 Alert.alert(response.data.message)
             }, (error) => {
                 console.log(error)
+                Alert.alert('Error', error.response.data.error)
             }
         )
     }
@@ -56,10 +57,12 @@ const styles = StyleSheet.create({
     },
     input: {
         width: '90%',
-        height: 40,
+        height: 50,
         borderBottomWidth: 1,
+        marginTop:20,
         marginBottom: 20,
-        paddingHorizontal: 10
+        paddingHorizontal: 10,
+        fontSize: 20
     },
     button: {
         backgroundColor: 'green',
